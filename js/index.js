@@ -77,7 +77,7 @@ navItems[0].innerHTML = siteContent.nav['nav-item-1'];
 navItems[1].innerHTML = siteContent.nav['nav-item-2'];
 navItems[2].innerHTML = siteContent.nav['nav-item-3'];
 navItems[3].innerHTML = siteContent.nav['nav-item-4'];
-navItems[4].innerHTML = siteContent.nav['nav-item-4'];
+navItems[4].innerHTML = siteContent.nav['nav-item-5'];
 navItems[5].innerHTML = siteContent.nav['nav-item-6'];
 
 // Cta
