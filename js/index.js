@@ -47,7 +47,8 @@ let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Selectors
-const navItems = document.querySelectorAll('header nav a'),
+const nav = document.querySelector('header nav'),
+  navItems = document.querySelectorAll('header nav a'),
   ctaHeading = document.querySelector('.cta .cta-text h1'),
   ctaButton = document.querySelector('.cta .cta-text button'),
   ctaImage = document.querySelector('.cta #cta-img'),
@@ -109,3 +110,22 @@ contactP[2].innerHTML = siteContent.contact.email;
 
 // Footer
 footer.innerHTML = siteContent.footer.copyright;
+
+// New Content
+navItems.forEach(link => {
+  link.style.color = 'green';
+});
+
+const portfolio = document.createElement('a');
+portfolio.setAttribute('src', '#');
+portfolio.textContent = 'Portfolio';
+portfolio.style.color = 'green';
+
+nav.prepend(portfolio);
+
+const blog = document.createElement('a');
+blog.setAttribute('src', '#');
+blog.textContent = 'Blog';
+blog.style.color = 'green';
+
+nav.appendChild(blog);
