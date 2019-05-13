@@ -145,10 +145,14 @@ function hideImage() {
   const image = document.getElementById('cta-img');
 
   image.style.visibility = 'hidden';
+  ctaText.style.background = 'skyblue';
+  ctaImage.style.background = 'white';
 }
 
 function showImage() {
   const image = document.getElementById('cta-img');
 
   image.style.visibility = 'visible';
+  ctaText.style.background = 'white';
+  ctaImage.style.background = 'skyblue';
 }
