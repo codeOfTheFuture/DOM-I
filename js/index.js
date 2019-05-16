@@ -49,6 +49,7 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 // Selectors
 const nav = document.querySelector('header nav'),
   navItems = document.querySelectorAll('header nav a'),
+  ctaText = document.querySelector('.cta .cta-text'),
   ctaHeading = document.querySelector('.cta .cta-text h1'),
   ctaButton = document.querySelector('.cta .cta-text button'),
   ctaImage = document.querySelector('.cta #cta-img'),
@@ -129,3 +130,29 @@ blog.textContent = 'Blog';
 blog.style.color = 'green';
 
 nav.appendChild(blog);
+
+// Stretch
+const newButton = document.createElement('button');
+newButton.innerHTML = 'Press and Hold!';
+
+ctaText.prepend(newButton);
+
+newButton.addEventListener('mousedown', hideImage);
+
+newButton.addEventListener('mouseup', showImage);
+
+function hideImage() {
+  const image = document.getElementById('cta-img');
+
+  image.style.visibility = 'hidden';
+  ctaText.style.background = 'skyblue';
+  ctaImage.style.background = 'white';
+}
+
+function showImage() {
+  const image = document.getElementById('cta-img');
+
+  image.style.visibility = 'visible';
+  ctaText.style.background = 'white';
+  ctaImage.style.background = 'skyblue';
+}
